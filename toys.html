@@ -85,26 +85,19 @@
     <h2>Traditional Toys</h2>
     <div class="tile-grid">
       <article class="tile">
-  <strong>Pallanguzhi</strong>
+  <strong>Pallanguzhi with Sovi</strong>
 
- <img src="images/pallanguzhi.jpeg" alt="Pallanguzhi Toy" />
+ <img src="images/pallanguzhi.png" alt="Pallanguzhi Toy" />
 
 
   <p>Classic play pieces with timeless charm.</p>
 
   <div class="product-meta">
     <span>Traditional Toys</span>
-    <span class="price">$20</span>
+    <span class="price">$24</span>
   </div>
 
-  <a
-    class="btn btn-outline"
-    href="https://wa.me/16479137687?text=Hi%20Koodai!%20I%20am%20interested%20in%20Pallanguzhi."
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Enquire on WhatsApp
-  </a>
+<a class="btn btn-whatsapp" href="https://wa.me/16479137687?text=Hi%20Koodai!%20I%20am%20interested%20in%20the%20Pallanguzhi%20with%20Sovi." target="_blank" rel="noopener noreferrer">Enquire on WhatsApp</a>
 </article>
 
         <article class="tile">
@@ -116,7 +109,7 @@
           <div class="product-meta">
             <span>Traditional Toys</span><span class="price">$20</span>
           </div>
-          <a class="btn btn-outline" href="https://wa.me/16479137687?text=Hi%20Koodai!%20I%20am%20interested%20in%20Village%20Kitchen%20Set." target="_blank" rel="noopener noreferrer">
+          <a class="btn btn-whatsapp" href="https://wa.me/16479137687?text=Hi%20Koodai!%20I%20am%20interested%20in%20the%20Village%20Kitchen%20Set." target="_blank" rel="noopener noreferrer">
             Enquire on WhatsApp
           </a>
         </article>
@@ -127,32 +120,57 @@
           <div class="product-meta">
             <span>Traditional Toys</span><span class="price">$15</span>
           </div>
-          <a class="btn btn-outline" href="https://wa.me/16479137687?text=Hi%20Koodai!%20I%20am%20interested%20in%20Kitchen%20Set%202." target="_blank" rel="noopener noreferrer">
+          <a class="btn btn-whatsapp" href="https://wa.me/16479137687?text=Hi%20Koodai!%20I%20am%20interested%20in%20the%20Kitchen%20Set%202." target="_blank" rel="noopener noreferrer">
             Enquire on WhatsApp
           </a>
         </article>
-                <article class="tile">
-          <strong>Dhaayam</strong>
-          <img src="images/dhaayam.jpeg" alt="Dhaayam Toy" class="tile-image" />
-          <p>A warm, gift-friendly keepsake toy.</p>
-          <div class="product-meta">
-            <span>Traditional Toys</span><span class="price">$15</span>
-          </div>
-          <a class="btn btn-outline" href="https://wa.me/16479137687?text=Hi%20Koodai!%20I%20am%20interested%20in%20Dhaayam." target="_blank" rel="noopener noreferrer">
-            Enquire on WhatsApp
-          </a>
-        </article>
-      <article class="tile">
-          <strong>Aadu Puli aattam</strong>
-          <img src="images/aadupuli-aattam.jpeg" alt="Aadu Puli aattam Toy" class="tile-image" />
-          <p>A warm, gift-friendly keepsake toy.</p>
-          <div class="product-meta">
-            <span>Traditional Toys</span><span class="price">$15</span>
-          </div>
-          <a class="btn btn-outline" href="https://wa.me/16479137687?text=Hi%20Koodai!%20I%20am%20interested%20in%20Aadu%20Puli%20aattam." target="_blank" rel="noopener noreferrer">
-            Enquire on WhatsApp
-          </a>
-        </article>
+<article class="tile">
+  <strong>Dhaayam & Aadu Puli Aattam – Double-Sided Wooden Board Game</strong>
+
+ 
+<div class="product-slider">
+  <button class="slider-btn prev" onclick="changeSlide(this, -1)">❮</button>
+
+  <img
+    src="images/dhaayam.jpeg"
+    alt="Dhaayam Board Game"
+    class="slide active"
+  />
+
+  <img
+    src="images/aadupuli-aattam.jpeg"
+    alt="Aadu Puli Aattam Board Game"
+    class="slide"
+  />
+
+<div class="slider-dots">
+  <span class="dot active"></span>
+  <span class="dot"></span>
+</div>
+  <button class="slider-btn next" onclick="changeSlide(this, 1)">❯</button>
+</div>
+
+  <p>
+    Handcrafted double-sided wooden board featuring Dhaayam on one side
+    and Aadu Puli Aattam on the other. Enjoy two beloved traditional Tamil
+    strategy games in a single compact board.
+  </p>
+
+  <div class="product-meta">
+    <span>Traditional Games</span>
+    <span class="price">$15</span>
+  </div>
+
+  <a
+    class="btn btn-whatsapp"
+    href="https://wa.me/16479137687?text=Hi%20Koodai!%20I%20am%20interested%20in%20the%202-in-1%20Dhaayam%20and%20Aadu%20Puli%20Aattam%20Board%20Game."
+    target="_blank"
+    rel="noopener noreferrer" >
+    Enquire on WhatsApp
+  </a>
+</article>
+
+
       </div>
     </section>
     <section class="subcategory-section" id="educational">
@@ -222,5 +240,28 @@
 </div>
     </section>
     <script src="script.js"></script>
+<script>
+function changeSlide(button, direction) {
+  const slider = button.parentElement;
+  const slides = slider.querySelectorAll(".slide");
+
+  let currentIndex = 0;
+
+  slides.forEach((slide, index) => {
+    if (slide.classList.contains("active")) {
+      currentIndex = index;
+    }
+  });
+
+  slides[currentIndex].classList.remove("active");
+
+  let newIndex = currentIndex + direction;
+
+  if (newIndex >= slides.length) newIndex = 0;
+  if (newIndex < 0) newIndex = slides.length - 1;
+
+  slides[newIndex].classList.add("active");
+}
+</script>
 </body>
 </html>
