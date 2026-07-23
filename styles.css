@@ -42,7 +42,8 @@ button, input, textarea { font: inherit; }
 }
 /* Make the logo match the banner proportions */
 .brand-logo {
-  height: 72px;        /* matches the visual scale of your banner */
+  width:62px;
+  height:62px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -639,25 +640,112 @@ header {
   background: #8b5e3c;
 }
 
-
 @media (max-width: 1180px) {
-  .layout { grid-template-columns: 1fr; }
-  .sidebar { position: static; }
+
+  .layout{
+      display:flex;
+      flex-direction:column;
+  }
+
+  main{
+      order:1;
+      width:100%;
+  }
+
+  .sidebar{
+      order:2;
+      position:static;
+      width:100%;
+      margin-top:30px;
+  }
+
   .offer-strip,
   .product-grid,
   .tile-grid,
-  .callout-row { grid-template-columns: 1fr 1fr; }
+  .callout-row{
+      grid-template-columns:1fr 1fr;
+  }
 }
 
-@media (max-width: 760px) {
-  .navbar { flex-direction: column; align-items: flex-start; }
-  .nav-links { gap: 14px; }
-  .hero-banner { min-height: auto; }
-  .hero-inner { padding: 30px 22px; }
+@media (max-width:760px){
+
+  .navbar{
+      flex-direction:column;
+      align-items:flex-start;
+      gap:12px;
+  }
+
+  .nav-links{
+      width:100%;
+      justify-content:flex-start;
+      flex-wrap:wrap;
+      gap:10px;
+  }
+
+  .brand-logo{
+      width:56px;
+      height:56px;
+  }
+
+  .brand-name{
+      font-size:24px;
+  }
+
+  .brand-tagline{
+      font-size:12px;
+  }
+
+  .hero-banner{
+      border-radius:22px;
+      min-height:auto;
+  }
+
+  .hero-inner{
+      padding:32px 22px;
+  }
+
+  .hero-inner h1{
+      font-size:34px;
+      line-height:1.15;
+  }
+
+  .hero-inner p{
+      font-size:16px;
+  }
+
+  .hero-actions{
+      flex-direction:column;
+      gap:12px;
+  }
+
+  .hero-actions .btn{
+      width:100%;
+  }
+
   .offer-strip,
   .product-grid,
   .tile-grid,
-  .callout-row { grid-template-columns: 1fr; }
-  .sidebar-card { padding: 14px; }
-  .whatsapp-float { width: 56px; height: 56px; }
+  .callout-row{
+      grid-template-columns:1fr;
+  }
+
+  .sidebar{
+      margin-top:24px;
+  }
+
+  .sidebar-card{
+      padding:18px;
+  }
+
+  main{
+      padding:0;
+  }
+
+  .whatsapp-float{
+      width:54px;
+      height:54px;
+      right:18px;
+      bottom:18px;
+  }
+
 }
